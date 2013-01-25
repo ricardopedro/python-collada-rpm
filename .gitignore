@@ -1,4 +1,11 @@
+# sources
 /pycollada-*.tar.gz
 
+# fedpkg local build artifacts
 /python-collada-*.src.rpm
 /noarch/
+/.build-*.log
+/pycollada-*/
+
+# emacs cruft
+/*~
