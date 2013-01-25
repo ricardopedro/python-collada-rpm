@@ -1,0 +1,17 @@
+Defining install_requires in setup() causes the packages
+to be downloaded from pypi by easy_install.  That defeats
+the purpose of unit testing against installed system
+packages, so disable the install_requires attribute.
+
+diff -up pycollada-pycollada-ed5d8f8/setup.py.nodownloads pycollada-pycollada-ed5d8f8/setup.py
+--- pycollada-pycollada-ed5d8f8/setup.py.nodownloads    2012-09-20 11:52:49.000000000 -0500
++++ pycollada-pycollada-ed5d8f8/setup.py        2012-11-02 15:19:08.621455388 -0500
+@@ -22,7 +22,7 @@ setup(
+     author_email = 'jterrace@gmail.com',
+     platforms=["any"],
+     license="BSD",
+-    install_requires=install_requires,
++#    install_requires=install_requires,
+     extras_require = {
+         'prettyprint': ["lxml"],
+         'validation': ["lxml"]
