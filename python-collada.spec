@@ -1,7 +1,3 @@
-# sitelib for noarch packages, sitearch for others (remove the unneeded one)
-%{!?python_sitelib: %global python_sitelib %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")}
-%{!?python_sitearch: %global python_sitearch %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")}
-
 %global realname pycollada
 
 Name:           python-collada
@@ -58,6 +54,7 @@ as well as in-place editing.
 %changelog
 * Fri Jan 25 2013 John Morris <john@zultron.com> - 0.4-2
 - Add check section
+- Remove unneeded python site{lib,arch} macros
 
 * Wed Jan 23 2013 Richard Shaw <hobbes1069@gmail.com> - 0.4-1
 - Initial packaging.
