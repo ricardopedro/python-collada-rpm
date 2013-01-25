@@ -15,6 +15,7 @@ Patch0:         pycollada-0.4-disable_unittest_downloads.patch
 BuildArch:      noarch
 
 BuildRequires:  python2-devel
+BuildRequires:  python-setuptools
 # unit test requirements
 BuildRequires:  python-dateutil
 BuildRequires:  python-unittest2
@@ -54,6 +55,7 @@ as well as in-place editing.
 %changelog
 * Fri Jan 25 2013 John Morris <john@zultron.com> - 0.4-2
 - Add check section
+- Add extra BRs for check and build
 - Remove unneeded python site{lib,arch} macros
 
 * Wed Jan 23 2013 Richard Shaw <hobbes1069@gmail.com> - 0.4-1
