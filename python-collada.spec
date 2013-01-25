@@ -19,6 +19,11 @@ BuildRequires:  python-setuptools
 # unit test requirements
 BuildRequires:  python-dateutil
 BuildRequires:  python-unittest2
+BuildRequires:  numpy
+
+Requires:       python-dateutil
+Requires:       numpy
+
 
 %description
 pycollada is a python module for creating, editing and loading COLLADA, which
