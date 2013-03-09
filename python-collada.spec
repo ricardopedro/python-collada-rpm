@@ -2,7 +2,7 @@
 
 Name:           python-collada
 Version:        0.4
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        A python module for creating, editing and loading COLLADA
 Group:          Development/Languages
 
@@ -10,7 +10,8 @@ License:        BSD
 URL:            https://github.com/pycollada/pycollada
 # https://github.com/pycollada/pycollada/archive/v0.4.tar.gz
 Source0:        %{realname}-%{version}.tar.gz
-Patch0:         pycollada-0.4-disable_unittest_downloads.patch
+# Disable pypi downloads in setup.py to guarantee use of only system libs
+Patch0:         python-collada-0.4-disable_unittest_downloads.patch
 
 BuildArch:      noarch
 
@@ -58,6 +59,10 @@ as well as in-place editing.
 
 
 %changelog
+* Sat Mar  9 2013 John Morris <john@zultron.com> - 0.4-3
+- Rename disable_unittest_downloads patch to silence fedora-review
+  warning and add patch description in a comment
+
 * Fri Jan 25 2013 John Morris <john@zultron.com> - 0.4-2
 - Add check section
 - Add extra BRs for check and build
